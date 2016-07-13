@@ -58,7 +58,7 @@
     
   * Patch file: tools/cpp/CROSSTOOL
     From line 72 to 199 (toolchain "local_linux"), update all the gcc, g++ path, as well as all the include directory
-    and binutils' binarys' paths, in my case it looks like this:
+    and binutils' binarys' paths, in my case it looks like this (GCC path might differ):
     
     ```diff
     diff --git a/tools/cpp/CROSSTOOL b/tools/cpp/CROSSTOOL
