@@ -16,7 +16,7 @@
   ```
 
 ### Binutils
-  * Use newly installed GCC to compile & install the latest binutils (latest now is 2.26, I used 2.25 worked which
+  * Use newly installed GCC to compile & install the latest binutils (latest now is 2.26, I used 2.25 which
     worked fine, the minimum requirement is 2.22 or 2.24, I don't remember).
 
 ### Python
