@@ -9,7 +9,7 @@
   * Make sure the GCC is compiled with the following configuration:
 
   ```
-    ./configure --prefix=<prefix location> --enable-bootstrap --enable-shared --enable-threads=posix
+  $ ./configure --prefix=<prefix location> --enable-bootstrap --enable-shared --enable-threads=posix
   --enable-checking=release --with-system-zlib --enable-multilib --enable-__cxa_atexit --disable-libunwind-exceptions
   --enable-gnu-unique-object --enable-languages=c,c++,fortran --with-ppl --with-cloog --with-tune=generic
   --with-arch_32=i686 --build=x86_64-redhat-linux
@@ -24,13 +24,13 @@
   * For python2 use the following configuration options at least:
 
   ```
-  ./configure --prefix=<prefix location> --enable-shared --enable-unicode=ucs4
+  $ ./configure --prefix=<prefix location> --enable-shared --enable-unicode=ucs4
   ```
 
   * For python3 use the following configuration options at least:
 
   ```
-  ./configure --prefix=<prefix location> --enable-shared
+  $ ./configure --prefix=<prefix location> --enable-shared
   ```
 
   * Also, it's a good idea to specify ```--libdir=```, so that all major versions are using the same libdir which is
@@ -45,10 +45,11 @@
   * Go to the repository and checkout latest release version (0.3.0 at the moment):
 
   ```
-  git checkout 0.3.0
+  $ git checkout 0.3.0
   ```
  
   * Patch file: third_party/protobuf/BUILD
+
     @line 88:
 
     ```
@@ -126,7 +127,7 @@
   * Compile bazel:
   
   ```
-  CC=<full path to gcc> CXX=<full path to c++> ./compile.sh
+  $ CC=<full path to gcc> CXX=<full path to c++> ./compile.sh
   ```
   
   * Note:
@@ -143,7 +144,7 @@
   * Go to the repository and checkout latest release version (v0.9.0 at the moment):
 
   ```
-  git checkout v0.9.0
+  $ git checkout v0.9.0
   ```
   
   * Patch file: third_party/gpus/crosstool/CROSSTOOL
@@ -222,38 +223,38 @@
   * Build gpu support (make sure there is enough space in /tmp, need more than 2.0GB):
   
   ```
-  /path/to/bazel build -c opt --config=cuda //tensorflow/cc:tutorials_example_trainer
+  $ /path/to/bazel build -c opt --config=cuda //tensorflow/cc:tutorials_example_trainer
   ```
 
   * Test gpu support:
 
   ```
-  bazel-bin/tensorflow/cc/tutorials_example_trainer --use_gpu
+  $ bazel-bin/tensorflow/cc/tutorials_example_trainer --use_gpu
   ```
   
   * Build pip packages with GPU support:
   
   ```
-  /path/to/bazel build -c opt --config=cuda //tensorflow/tools/pip_package:build_pip_package
-  bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+  $ /path/to/bazel build -c opt --config=cuda //tensorflow/tools/pip_package:build_pip_package
+  $ bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
   ```
 
   Python2
   
   ```
-  sudo pip install /tmp/tensorflow_pkg/tensorflow-0.9.0-py2-none-any.whl
+  $ sudo pip install /tmp/tensorflow_pkg/tensorflow-0.9.0-py2-none-any.whl
   ```
 
   Python3
 
   ```
-  sudo pip install /tmp/tensorflow_pkg/tensorflow-0.9.0-py3-none-any.whl
+  $ sudo pip install /tmp/tensorflow_pkg/tensorflow-0.9.0-py3-none-any.whl
   ```
 
   * Test:
 
   ```
-  cd tensorflow/models/image/mnist
-  python convolutional.py
+  $ cd tensorflow/models/image/mnist
+  $ python convolutional.py
   ```
 
