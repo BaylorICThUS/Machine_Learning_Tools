@@ -45,6 +45,8 @@
   * Go to the repository and checkout latest release version (0.3.0 at the moment):
 
   ```
+  $ git clone https://github.com/bazelbuild/bazel.git
+  $ cd bazel
   $ git checkout 0.3.0
   ```
  
@@ -130,6 +132,8 @@
   $ CC=<full path to gcc> CXX=<full path to c++> ./compile.sh
   ```
   
+  Even though gcc and g++ paths are defined in the CROSSTOOL file, we still need to explicitly specify CC and CXX
+  
   * Note:
     1. There needs to be enough space in /tmp, otherwise it will fail.
     2. It's better to compile as root, since the compilation will spawn a lot of threads which normal user does not have
@@ -140,10 +144,12 @@
 
 ## Tensorflow Installation
 
-  * Clone the [tensorflow repository](https://github.com/tensorflow/tensorflow.git)
+  * Clone the [tensorflow repository](https://github.com/tensorflow/tensorflow)
   * Go to the repository and checkout latest release version (v0.9.0 at the moment):
 
   ```
+  $ git clone https://github.com/tensorflow/tensorflow.git
+  $ cd tensorflow
   $ git checkout v0.9.0
   ```
   
